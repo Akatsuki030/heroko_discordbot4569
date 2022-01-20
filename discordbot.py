@@ -28,7 +28,7 @@ async def on_message(message):
         
         if content == '':
             content = first
-        if translator.detect(content).lang == DSTLanguage:
+        if translator.detect(content).lang == DSTLanguage or DSTLanguage == '':
             return
         if translator.detect(content).lang == SRCLanguage or SRCLanguage == '':
             remessage = translator.translate(content, dest= 'zh_TW').text
@@ -41,7 +41,7 @@ async def on_message(message):
         
         if content == '':
             content = first
-        if translator.detect(content).lang == DSTLanguage:
+        if translator.detect(content).lang == DSTLanguage or DSTLanguage == '':
             return
         if translator.detect(content).lang == SRCLanguage or SRCLanguage == '':
             remessage = translator.translate(content, dest= 'en_US').text
@@ -54,7 +54,7 @@ async def on_message(message):
         
         if content == '':
             content = first
-        if translator.detect(content).lang == DSTLanguage:
+        if translator.detect(content).lang == DSTLanguage or DSTLanguage == '':
             return
         if translator.detect(content).lang == SRCLanguage or SRCLanguage == '':
             remessage = translator.translate(content, dest= 'ja').text
