@@ -28,8 +28,7 @@ async def on_message(message):
         
         if content == '':
             content = first
-        if translator.detect(content).lang == DSTLanguage or DSTLanguage == '':
-            return
+
         if translator.detect(content).lang == SRCLanguage or SRCLanguage == '':
             remessage = translator.translate(content, dest= 'zh_TW').text
             await message.reply(remessage) 
