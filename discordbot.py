@@ -26,8 +26,6 @@ async def on_message(message):
         robotName = client.user.name
         first, space, content = message.clean_content.partition('@'+robotNametw+'') 
 
-         if content == '':
-            content = first
       
         
 
