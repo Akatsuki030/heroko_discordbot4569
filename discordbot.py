@@ -24,7 +24,7 @@ async def on_message(message):
     if client.user in message.mentions: # @判定
         translator = googletrans.Translator()
         robotName = client.user.name
-        first, space, content = message.clean_content.partition('@'+robotName+'中文')
+        first, space, content = message.clean_content.partition('@'+robotName+' 中文')
         
         if content == '':
             content = first
@@ -37,7 +37,7 @@ async def on_message(message):
     if client.user in message.mentions: # @判定
         translator = googletrans.Translator()
         robotName = client.user.name
-        first, space, content = message.clean_content.partition('@'+robotName+'英文')
+        first, space, content = message.clean_content.partition('@'+robotName+' 英文')
         
         if content == '':
             content = first
@@ -50,7 +50,7 @@ async def on_message(message):
     if client.user in message.mentions: # @判定
         translator = googletrans.Translator()
         robotName = client.user.name
-        first, space, content = message.clean_content.partition('@'+robotName+'日文')
+        first, space, content = message.clean_content.partition('@'+robotName+' 日文')
         
         if content == '':
             content = first
