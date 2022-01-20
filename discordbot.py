@@ -24,7 +24,7 @@ async def on_message(message):
     if client.user in message.mentions: # @判定
         translator = googletrans.Translator()
         robotName = client.user.name
-        first, space, language, content = message.clean_content.partition('@'+robotName+'tw: '+'') 
+        first, space, content = message.clean_content.partition('tw@'+robotName+'') 
 
         
         if content == '':
