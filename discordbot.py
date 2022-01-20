@@ -24,12 +24,10 @@ async def on_message(message):
     if client.user in message.mentions: # @判定
         translator = googletrans.Translator()
         robotName = client.user.name
-        first, space, content = message.clean_content.partition('tw@'+robotName+'') 
+        first, space, content = message.clean_content.partition('tw@'robotName+'') 
 
         
-        if content == '':
-            content = first
-        
+      
         
 
         if translator.detect(content).lang == SRCLanguage or SRCLanguage == '':
